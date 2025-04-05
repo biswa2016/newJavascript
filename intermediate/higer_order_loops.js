@@ -33,12 +33,12 @@ let obj = {
 }
 
 for (const key in obj) {
-    console.log(key,":-", obj[key]);
+    console.log(key, ":-", obj[key]);
 
 }
 
 for (const key in arr) {
-    console.log(key,":-",arr[key]);
+    console.log(key, ":-", arr[key]);
 
 }
 
@@ -46,3 +46,52 @@ for (const key in map) {
     console.log(key);
 
 }
+
+
+let lang = ["js", "ruby", "java", "python", "cpp", "pc"];
+
+// 1st way
+
+// lang.forEach((ele) => {
+//     console.log(ele);
+// })
+
+// 2nd way
+
+// lang.forEach(function (ele) {
+//     console.log(ele);
+// })
+
+// 3rd way
+
+// function language(lan){
+//     console.log(lan);
+    
+// }
+// lang.forEach(language)
+
+
+// lang.forEach((iteam,ind,array)=>{
+//     console.log(iteam,ind,array);
+// })
+
+const myCoding = [
+    {
+        lanName:"JavaScript",
+        lanFileName:"JavaScript"
+    },
+    {
+        lanName:"Java",
+        lanFileName:"Java"
+    },
+    {
+        lanName:"Python",
+        lanFileName:"Python"
+    }
+]
+
+myCoding.forEach((iteam)=>{
+    console.log(iteam.lanName);
+    
+})
+
