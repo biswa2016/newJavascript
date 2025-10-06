@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+          <li><img id="1" width="200px" height="200px" src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=600" alt="Image 1"></li>
+          <li><img id="2" width="200px" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Image 2"></li>
+          <li><img id="3" width="200px" src="https://images.unsplash.com/photo-1493244040629-496f6d136cc4?w=600" alt="Image 3"></li>
+          <li><img id="4" width="200px" height="200px"  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Image 4"></li>
+        </ul>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+      </div>
+    
+</body>
+<script>
+    // document.getElementById('3').onclick = function(){
+    //     alert('clicked')
+    // }
+
+    // document.getElementById('images').addEventListener('click',function(e){
+
+    //    console.log('clicked in ul');      
+  
+    // },false) // third parameter event propagation
+
+    // document.getElementById('3').addEventListener('click',function(e){
+    //     // alert("clicked")
+    //     // console.log(e);
+    //     // type , timestamp, defaultPrevented , target, ttoElement, scrElement, currentTarget
+    //     // clientX , clientY , screenX , ScreenY , altkey , ctrlkey, shiftkey, keyCode
+    //   console.log('clicked in image 3 ');
+    //   e.stopPropagation();
+        
+    // },false)
+
+  
+
+    // attachEvent()
+    // jQuery - on
+
+
+//    document.getElementById('google').addEventListener('click',function(e){
+//        console.log('clicked google');
+//        e.preventDefault();
+//    },false)
+
+
+   document.querySelector('#images').addEventListener('click',(e)=>{
+        //  console.log(e.target);
+         console.log(e.target.parentNode);
+         console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            
+            const removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+        // removeIt.parentNode.removeChild(removeIt)
+
+   },false)
+
+</script>
+</html>

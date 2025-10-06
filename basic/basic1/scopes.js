@@ -1,0 +1,25 @@
+// var c = 300;
+var a = 300;
+
+if (true) {
+  let a = 10;
+  const b = 20;
+  var c = 30;
+
+  console.log("INNER :", a);
+}
+
+console.log(a);
+// console.log(b);
+// console.log(c);
+
+function one() {
+  const user = "kunu";
+  function two() {
+    const web = "youtube";
+    console.log(user);
+  }
+//   console.log(web);
+  two();
+}
+one();

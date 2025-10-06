@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Biswa Ranjan Nayak</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const dayDate = (str)=>{
+        console.log(`HI ${str}`,Date.now());
+        
+     };
+    let intervalId;
+     
+
+     document.querySelector('#start').addEventListener('click',()=>{
+        intervalId = setInterval(dayDate,1000,"Jack");
+     })
+     document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(intervalId);
+     })
+</script>
+</html>
